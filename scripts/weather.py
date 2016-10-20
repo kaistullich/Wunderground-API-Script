@@ -1,5 +1,11 @@
+# -*- coding: utf-8 -*-
+
 import urllib2
 import json
+import sys  
+
+reload(sys)  
+sys.setdefaultencoding('utf8')
 
 # Allows user to set the State in which they want to search
 user_state = raw_input("Please enter the State's abbreviation (i.e. CA, NV, etc): ")
@@ -29,6 +35,6 @@ location = parsed_json['location']['city']
 
 temp_f = parsed_json['current_observation']['temp_f']
 
-print ("\nThe current temperature in %s is: %s" % (location, temp_f))
+print ("\nThe current temperature in %s is: %s °F" % (location, temp_f))
 # Exit the script
 wunderground_url.close()
