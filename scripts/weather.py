@@ -29,6 +29,6 @@ location = parsed_json['location']['city']
 
 temp_f = parsed_json['current_observation']['temp_f']
 
-print ("Current temperature in %s is: %s" % (location, temp_f))
+print ("\nThe current temperature in %s is: %s" % (location, temp_f))
 # Exit the script
 wunderground_url.close()
