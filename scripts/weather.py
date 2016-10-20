@@ -7,8 +7,6 @@ import sys
 reload(sys)  
 sys.setdefaultencoding('utf8')
 
-choice = ""
-
 while True:
     # Allows user to set the State in which they want to search
     user_state = raw_input("\nPlease enter the State's abbreviation (i.e. CA, NV, etc): ")
