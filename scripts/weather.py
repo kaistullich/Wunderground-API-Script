@@ -14,11 +14,8 @@ while True:
         temp_f = parsed_json['current_observation']['temp_f']
         print("\nThe current temperature in {loc} is: {deg} °F".format(loc=location, deg=temp_f))
 
-    except KeyError:
-        print('System did not return a proper response, please try again.')
-
-    except NameError:
-        print('System did not return a proper response, please try again.')
+    except (KeyError, NameError):
+        print('\nThe system did not return a proper response, please try again.')
 
     while True:
         accepted_no_answer = ['no', 'n']
